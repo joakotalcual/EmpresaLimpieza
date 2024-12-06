@@ -1,0 +1,73 @@
+@import url('variables.css');
+@media screen and (max-width:480px){
+    /* HEADER */
+    header{
+        position: fixed;
+        background-color: var(--text-color-secundary-filter);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    .flexHeader{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .contIzquierdo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 3%;
+        color: var(--background-color);
+        position: relative;
+    }
+    .contIzquierdo figure{
+        display: none;
+    }
+    .contIzquierdo  h1 {
+        position: relative;
+        z-index: 1;
+        margin-top: 0;
+    }
+    nav ul{
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 250px;
+        height: calc(100% - 50px);
+        background-color: var(--text-color);
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+        gap: 5px;
+        padding: 1% 2%;
+        transition: left 0.8s ease;
+        z-index: 1000;
+    }
+    nav ul li a{
+        color: var(--text-color-secundary);
+        padding: 10px 20px;
+    }
+    .movilHome{
+        display: flex;
+        position: fixed;
+        background-color: var(--text-color);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 101;
+        padding: 2.5% 4%;
+        height: 50px;
+        gap: 20px;
+    }
+    .menu.show {
+        left: 0;
+    }
+    .menu-toggle {
+        color: var(--color-black);
+    }
+    /* SLIDE */
+}

@@ -1,0 +1,20 @@
+@import url('variables.css');
+@media screen and (max-width:768px){
+    /* HEADER */
+    header{
+        position: absolute;
+        background-color: var(--text-color-secundary-filter);
+        width: 100%;
+    }
+    .flexHeader{
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul{
+        gap: 0px;
+    }
+    nav ul li a{
+        padding: 40px 10px;
+    }
+    /* SLIDE */
+}

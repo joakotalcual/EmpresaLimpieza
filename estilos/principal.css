@@ -1,0 +1,117 @@
+@import url('variables.css');
+/* SLIDE */
+.Slide{
+    position: relative;
+    overflow: hidden;
+}
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    max-height: 950px;
+}
+.rslides li {
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+    min-height: 400px;
+    object-fit: cover;
+}
+.Slide button.prev, .Slide button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(var(--text-color), 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.rslides_nav.prev,
+.rslides_nav.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    z-index: 10;
+    text-decoration: none;
+}
+.rslides_nav.prev {
+    left: 140px;
+}
+.rslides_nav.next {
+    right: 140px;
+}
+.informacionSlide {
+    z-index: 100;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5%;
+    max-width: 95%;
+    min-height: 500px;
+    text-align: center;
+    background-color: var(--text-color-secundary-filter);
+    border-radius: 30px;
+    color: var(--text-color);
+    clip-path: polygon(58% 8%, 100% 14%, 89% 38%, 96% 57%, 65% 67%, 45% 70%, 25% 62%, 0 70%, 11% 39%, 0 16%);
+
+}
+.informacionSlide h2 {
+    font-size: 45px;
+    line-height: 100%;
+}
+.informacionSlide p{
+    margin: 20px 0;
+}
+/* OUR CORE VALUES */
+.curved-div{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--primary-color);
+    position: relative;
+    top: 100%;
+    left: 0;
+    transform: translateY(-20%);
+    z-index: 2;
+    clip-path: polygon(50% 0%, 70% 3%, 88% 8%, 100% 17%, 100% 100%, 0 100%, 0 16%, 13% 8%, 31% 2%);
+}
+/* SOME OF OUR GREAT FEATURES */
+.features{
+}
+.features .tripleContenido{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+.features .tripleContenido article{
+    display: flex;
+    flex-direction: column;
+}
+.features .tripleContenido article figure img{
+    width: 100%;
+    height: auto;
+}
+.features .tripleContenido article figure{
+    width: 100%;
+}
