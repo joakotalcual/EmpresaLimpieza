@@ -72,10 +72,8 @@
     min-height: 500px;
     text-align: center;
     background-color: var(--text-color-secundary-filter);
-    border-radius: 30px;
     color: var(--text-color);
     clip-path: polygon(58% 8%, 100% 14%, 89% 38%, 96% 57%, 65% 67%, 45% 70%, 25% 62%, 0 70%, 11% 39%, 0 16%);
-
 }
 .informacionSlide h2 {
     font-size: 45px;
@@ -113,5 +111,74 @@
     height: auto;
 }
 .features .tripleContenido article figure{
+    width: 100%;
+}
+/* SERVICES */
+.services .cuadrupleContenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services .cuadrupleContenido article figure img{
+    width: 100%;
+    height: auto;
+}
+.services .cuadrupleContenido article figure{
+    width: 80%;
+    clip-path: polygon(50% 0%, 95% 30%, 95% 70%, 50% 95%, 5% 70%, 5% 30%);
+}
+#carousel {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+/* contenido carrrousel */
+#slide-container {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+    color: #000;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+.slide {
+    scroll-snap-align: left;
+    min-width: 34%;
+    text-align: center;
+}
+.slide figure img{
+    width: 100%;
+    height: auto;
+}
+.slide figure{
+    min-width: 34%;
+}
+
+/* flechas */
+.arrow {
+    background-color: #fbdf00;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: all 0.5s;
+    margin: 0 10px;
+    border: 2px black solid;
+}
+.arrow:hover {
+    background-color: black;
+    color: white;
+    border: 2px gray solid;
+}
+.contenedor_flechas {
+    display: flex;
+    justify-content: end;
     width: 100%;
 }

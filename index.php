@@ -30,7 +30,27 @@
         <div class="filtro"></div>
     </section>
     <section class="curved-div">
+        <h2>Our Core Values</h2>
+        <div class="separador">
 
+        </div>
+        <p>Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul
+        um ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
+        <article>
+            <span>01</span>
+            <h3>Vestibulum facilisis ligula</h3>
+            <p>Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul</p>
+        </article>
+        <article>
+            <span>02</span>
+            <h3>ligula urna vitae cursus</h3>
+            <p>Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultri</p>
+        </article>
+        <article>
+            <span>03</span>
+            <h3>urna vitae cursus tort</h3>
+            <p>Vestibulum ante ipsum primis in faucibus or ciluctus et ultrices posuere cubilia Curaraesent non sapien cursus blandit turp</p>
+        </article>
     </section>
 
     <section class="features ancho">
@@ -63,9 +83,83 @@
         </div>
     </section>
 
+    <section id="carousel" class="services">
+        <h2>Services We Offer</h2>
+        <div class="separador">
+        </div>
+        <div id="slide-container" class="cuadrupleContenido">
+            <article class="slide" data-slideIndex="0">
+                <figure>
+                    <img src="recursos/service1.jpg" alt="Texto descriptivo">
+                </figure>
+                <p>OFFICE & COMMERCIAL CLEANING</p>
+            </article>
+            <article class="slide" data-slideIndex="1">
+                <figure>
+                    <img src="recursos/service2.jpg" alt="Texto descriptivo">
+                </figure>
+                <p>WINDOWS & DOORS CLEANING</p>
+            </article>
+            <article class="slide" data-slideIndex="2">
+                <figure>
+                    <img src="recursos/service3.jpg" alt="Texto descriptivo">
+                </figure>
+                <p>HOUSE CLEANING & MAID SERVICE</p>
+            </article>
+            <article class="slide" data-slideIndex="3">
+                <figure>
+                    <img src="recursos/service4.jpg" alt="Texto descriptivo">
+                </figure>
+                <p>CARPET AND UPHOLSTERY CLEANING</p>
+            </article>
+        </div>
+        <div class="contenedor_flechas">
+                <button href="#" id="back-button" class="arrow back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button href="#" id="forward-button" class="arrow forward">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+    </section>
+    <!-- <section id="carousel">
+            <div id="slide-container">
+                <article class="slide" data-slideIndex="0">
+                    <figure>
+                        <img src="imagenes/foto1.jpg" alt="Texto descriptivo">
+                    </figure>
+                    <h3>John Tuff</h3>
+                    <p>Field Technician</p>
+                </article>
+                <article class="slide" data-slideIndex="2">
+                    <figure>
+                        <img src="imagenes/foto3.jpg" alt="Texto descriptivo">
+                    </figure>
+                    <h3>Frank McMillan</h3>
+                    <p>General Manager</p>
+                </article>
+                <article class="slide" data-slideIndex="3">
+                    <figure>
+                        <img src="imagenes/foto4.jpg" alt="Texto descriptivo">
+                    </figure>
+                    <h3>John Smith</h3>
+                    <p>Field Technician</p>
+                </article>
+                <article class="slide" data-slideIndex="4">
+                    <figure>
+                        <img src="imagenes/foto5.jpg" alt="Texto descriptivo">
+                    </figure>
+                    <h3>John Smith</h3>
+                    <p>Field Technician</p>
+                </article>
+            </div>
+        </section> -->
+    <!-- ADEMAS DE LA LANDINGPAGE ME FALTARIA AGREGAR VIDEO, PARALLAXS, ACORDEON, LIGHTBOX, MODAL Y FILTRO -->
+
     <?php require 'footerPrincipal.html';?>
 
     <script>
+        // SCRIPT SLIDE
         $(function() {
             $(".rslides").responsiveSlides({
                 auto: true,         // Cambia de imagen automáticamente
@@ -81,15 +175,16 @@
             }
             );
         });
+        // SCRIPT MENU RESPONSIVE
         document.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.menu');
-    const toggleButton = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            const toggleButton = document.querySelector('.menu-toggle');
 
-    toggleButton.addEventListener('click', () => {
-        menu.classList.toggle('show');
-    });
-});
-
+            toggleButton.addEventListener('click', () => {
+                menu.classList.toggle('show');
+            });
+        });
     </script>
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>

@@ -17,4 +17,38 @@
         padding: 40px 10px;
     }
     /* SLIDE */
+    .rslides img {
+        min-height: 500px;
+    }
+    .rslides_nav.prev {
+        left: 30px;
+    }
+    .rslides_nav.next {
+        right: 30px;
+    }
+    .informacionSlide {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        padding: 15% 10%;
+        max-height: 200px;
+    }
+    .informacionSlide h2 {
+        font-size: 25px;
+    }
+    .informacionSlide p{
+        display: none;
+    }
+    /* CURVED DIV */
+    .curved-div{
+        width: 100%;
+        height: 50vh;
+        background-color: var(--primary-color);
+        position: relative;
+        top: 100%;
+        left: 0;
+        transform: translateY(-20%);
+        z-index: 2;
+        clip-path: polygon(50% 0%, 70% 3%, 88% 8%, 100% 17%, 100% 100%, 0 100%, 0 16%, 13% 8%, 31% 2%);
+    }
 }

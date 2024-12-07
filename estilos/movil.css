@@ -70,4 +70,10 @@
         color: var(--color-black);
     }
     /* SLIDE */
+    .rslides_nav.prev {
+        left: 5px;
+    }
+    .rslides_nav.next {
+        right: 5px;
+    }
 }
