@@ -71,7 +71,7 @@
     max-width: 95%;
     min-height: 500px;
     text-align: center;
-    background-color: var(--text-color-secundary-filter);
+    background-color: var(--text-color-secondary-filter);
     color: var(--text-color);
     clip-path: polygon(58% 8%, 100% 14%, 89% 38%, 96% 57%, 65% 67%, 45% 70%, 25% 62%, 0 70%, 11% 39%, 0 16%);
 }
@@ -114,6 +114,11 @@
     width: 100%;
 }
 /* SERVICES */
+.services{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .services .cuadrupleContenido{
     display: flex;
     justify-content: center;
@@ -160,25 +165,168 @@
 .slide figure{
     min-width: 34%;
 }
-
 /* flechas */
 .arrow {
-    background-color: #fbdf00;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--color-black);
     text-decoration: none;
     cursor: pointer;
     padding: 10px 15px;
-    transition: all 0.5s;
+    transition: all 0.5s linear;
     margin: 0 10px;
-    border: 2px black solid;
+    border: 2px var(--color-black) solid;
 }
 .arrow:hover {
-    background-color: black;
-    color: white;
-    border: 2px gray solid;
+    background-color: var(--text-color);
+    border: 2px var(--text-color-secondary) solid;
+    transition: all 0.5s linear;
 }
 .contenedor_flechas {
     display: flex;
     justify-content: end;
     width: 100%;
+}
+/* WHY CHOOSE US */
+.bgColor{
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* 2 filas con la misma altura */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.grid-item i{
+    color: var(--primary-color);
+}
+.grid-item .contenidoChoose h3{
+    color: var(--text-color-secondary);
+}
+.grid-item .contenidoChoose p{
+    color: var(--text-color-tertiary);
+}
+/* WHAT PEOPLE*/
+.profiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+.btnViewMore{
+    display: none;
+}
+.profiles article{
+    width: 25%;
+}
+.profiles article figure{
+    width: 80%;
+    clip-path: polygon(50% 0%, 95% 30%, 95% 70%, 50% 95%, 5% 70%, 5% 30%);
+}
+.profiles article figure img{
+    width: 100%;
+    height: auto;
+}
+/* CONTACT FORM */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.input-container {
+    flex: 1;
+    position: relative;
+}
+.input-container input {
+    width: 100%;
+    padding: 8px 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: none;
+}
+.input-container input:focus {
+    border-bottom-color: #007BFF;
+}
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #007BFF;
+}
+.textarea-container {
+    position: relative;
+    width: 100%;
+}
+.textarea-container textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    background: none;
+}
+.textarea-container textarea:focus {
+    border-color: #007BFF;
+}
+.textarea-container label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.textarea-container textarea:focus + label,
+.textarea-container textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #007BFF;
+}
+form button {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #0056b3;
 }

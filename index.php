@@ -114,46 +114,119 @@
             </article>
         </div>
         <div class="contenedor_flechas">
-                <button href="#" id="back-button" class="arrow back">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button href="#" id="forward-button" class="arrow forward">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
+            <button href="#" id="back-button" class="arrow back">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button href="#" id="forward-button" class="arrow forward">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
     </section>
-    <!-- <section id="carousel">
-            <div id="slide-container">
-                <article class="slide" data-slideIndex="0">
-                    <figure>
-                        <img src="imagenes/foto1.jpg" alt="Texto descriptivo">
-                    </figure>
-                    <h3>John Tuff</h3>
-                    <p>Field Technician</p>
-                </article>
-                <article class="slide" data-slideIndex="2">
-                    <figure>
-                        <img src="imagenes/foto3.jpg" alt="Texto descriptivo">
-                    </figure>
-                    <h3>Frank McMillan</h3>
-                    <p>General Manager</p>
-                </article>
-                <article class="slide" data-slideIndex="3">
-                    <figure>
-                        <img src="imagenes/foto4.jpg" alt="Texto descriptivo">
-                    </figure>
-                    <h3>John Smith</h3>
-                    <p>Field Technician</p>
-                </article>
-                <article class="slide" data-slideIndex="4">
-                    <figure>
-                        <img src="imagenes/foto5.jpg" alt="Texto descriptivo">
-                    </figure>
-                    <h3>John Smith</h3>
-                    <p>Field Technician</p>
-                </article>
+    <section class="bgColor whyChoose">
+        <h2>Why Choose Us</h2>
+        <div class="separador">
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <i class="fa-solid fa-mug-hot"></i>
+                <div class="contenidoChoose">
+                    <h3>MALESUADA ACSUSC</h3>
+                    <p>Vivamus ultricies sem at consectetur euismod. Ut mi justo, accumsan sed malesuada ac, suscip.</p>
+                </div>
             </div>
-        </section> -->
+            <div class="grid-item">
+                <i class="fa-solid fa-chair"></i>
+                <div class="contenidoChoose">
+                    <h3>ONSECTETUR EUISMOD</h3>
+                    <p>Ut mi justo, accumsan sed malesua da ac, suscipit in orci. Nulla ac dui digni ssim lectus tempor egest.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <i class="fa-solid fa-user"></i>
+                <div class="contenidoChoose">
+                    <h3>CUMSAN SED MALESUADA</h3>
+                    <p>Curabitur turpis arcu, bibendum a orci at, dapibus euismod leo. Mauris efficitur faucibus leo id iaculis.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <i class="fa-solid fa-sun"></i>
+                <div class="contenidoChoose">
+                    <h3>SEM AT CONSECTETUR</h3>
+                    <p>Suscipit in orci. Nulla ac dui dignissim lectus tempor egestas id at velit. Curabi tur turpis arcu, bibendum.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <i class="fa-solid fa-house"></i>
+                <div class="contenidoChoose">
+                    <h3>SEM AT CONSECTETUR</h3>
+                    <p>Curabitur turpis arcu, bibendum a orci at, dapibus euismod leo. Mauris efficitur faucibus leo id iaculis.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <i class="fa-solid fa-star"></i>
+                <div class="contenidoChoose">
+                    <h3>JUSTO ACCUMSAN SED</h3>
+                    <p>Nulla ac dui dignissim lectus tempor egestas id at velit. Curabitur turpis arcu, bibendum a orci at, dapib.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="whatPeople">
+        <h2>What People Say About Us</h2>
+        <div class="separador">
+        </div>
+        <div class="profiles">
+            <article>
+                <figure>
+                    <img src="recursos/profile1.jpg" alt="Texto descriptivo">
+                </figure>
+                <h3>TRISS MERIGOLD</h3>
+                <button class="btnViewMore">View more</button>
+            </article>
+            <article>
+                <figure>
+                    <img src="recursos/profile2.jpg" alt="Texto descriptivo">
+                </figure>
+                <h3>MARK JOHNSON</h3>
+                <button class="btnViewMore">View more</button>
+            </article>
+            <article>
+                <figure>
+                    <img src="recursos/profile3.jpg" alt="Texto descriptivo">
+                </figure>
+                <h3>YENNEFER Z VENGERBERGU</h3>
+                <button class="btnViewMore">View more</button>
+                <!-- crear el modal para más información y tener el filtro y el video respectivo de cada integrante -->
+            </article>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact form</h2>
+        <div class="separador">
+        </div>
+        <form action="#" method="post" class="form-container">
+            <div class="row">
+                <div class="input-container">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Your Name</label>
+                </div>
+                <div class="input-container">
+                <input type="text" id="email" name="email" placeholder=" " required>
+                <label for="email">Your E-mail</label>
+                </div>
+                <div class="input-container">
+                <input type="text" id="phone" name="phone" placeholder=" " required>
+                <label for="phone">Your Phone</label>
+                </div>
+            </div>
+            <div class="textarea-container">
+                <textarea name="message" id="message" placeholder=" " required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit">Submit comment</button>
+            </form>
+    </section>
     <!-- ADEMAS DE LA LANDINGPAGE ME FALTARIA AGREGAR VIDEO, PARALLAXS, ACORDEON, LIGHTBOX, MODAL Y FILTRO -->
 
     <?php require 'footerPrincipal.html';?>

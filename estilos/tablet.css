@@ -3,7 +3,7 @@
     /* HEADER */
     header{
         position: absolute;
-        background-color: var(--text-color-secundary-filter);
+        background-color: var(--text-color-secondary-filter);
         width: 100%;
     }
     .flexHeader{

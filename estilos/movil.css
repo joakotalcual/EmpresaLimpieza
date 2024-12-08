@@ -3,7 +3,7 @@
     /* HEADER */
     header{
         position: fixed;
-        background-color: var(--text-color-secundary-filter);
+        background-color: var(--text-color-secondary-filter);
         top: 0;
         left: 0;
         width: 100%;
@@ -48,7 +48,7 @@
         z-index: 1000;
     }
     nav ul li a{
-        color: var(--text-color-secundary);
+        color: var(--text-color-secondary);
         padding: 10px 20px;
     }
     .movilHome{
