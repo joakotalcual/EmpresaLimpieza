@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleaning Solution</title>
-    <link rel='stylesheet' href='estilos/estilos.css'>
-    <link rel='stylesheet' href='estilos/header.css'>
     <link rel='stylesheet' href='estilos/principal.css'>
     <link rel='stylesheet' href='estilos/tablet.css'>
     <link rel='stylesheet' href='estilos/movil.css'>
+    <link rel='stylesheet' href='recursos/animate.css'>
     <script src='https://kit.fontawesome.com/d188054eba.js' crossorigin='anonymous'></script>
     <script src='https://code.jquery.com/jquery-3.7.1.js' crossorigin='anonymous'></script>
     <script src="scripts/responsiveslides.min.js"></script>
@@ -22,51 +21,68 @@
             <li><img src="recursos/slide2.jpg" alt=""></li>
             <li><img src="recursos/slide3.jpg" alt=""></li>
         </ul>
-        <div class="informacionSlide">
+        <div class="informacionSlide animate__animated animate__fadeIn animate__delay-1s">
             <h2>Offering high quality cleaning
                 <span>services at affordable prices</span></h2>
             <p>Quisque suscipit lacus vestibulum odio rhoncus, non iaculis lectus mattis. Integer mattis tempus neque, eget tincidunt nibh tin cidunt ac. Maecenas feugiat lorem ut nibh maximus tempus. Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus</p>
         </div>
-        <div class="filtro"></div>
     </section>
     <section class="curved-div">
-        <h2>Our Core Values</h2>
-        <div class="separador">
-
+        <h2 class="ancho">Our Core Values</h2>
+        <div class="separador2 ancho">
+            <hr>
+            <span></span>
+            <hr>
         </div>
-        <p>Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul
+        <p  class="ancho">Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul
         um ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
-        <article>
-            <span>01</span>
-            <h3>Vestibulum facilisis ligula</h3>
-            <p>Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul</p>
-        </article>
-        <article>
-            <span>02</span>
-            <h3>ligula urna vitae cursus</h3>
-            <p>Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultri</p>
-        </article>
-        <article>
-            <span>03</span>
-            <h3>urna vitae cursus tort</h3>
-            <p>Vestibulum ante ipsum primis in faucibus or ciluctus et ultrices posuere cubilia Curaraesent non sapien cursus blandit turp</p>
-        </article>
+        <div class="contenidoCurved ancho">
+            <article class="wow animate__animated animate__fadeInUp">
+                <span class="forma">01</span>
+                <h3>Vestibulum facilisis ligula</h3>
+                <p>Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul</p>
+            </article>
+            <article class="wow animate__animated animate__fadeInUp animate__delay-1s">
+                <span class="forma">02</span>
+                <h3>ligula urna vitae cursus</h3>
+                <p>Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultri</p>
+            </article>
+            <article class="wow animate__animated animate__fadeInUp animate__delay-2s">
+                <span class="forma">03</span>
+                <h3>urna vitae cursus tort</h3>
+                <p>Vestibulum ante ipsum primis in faucibus or ciluctus et ultrices posuere cubilia Curaraesent non sapien cursus blandit turp</p>
+            </article>
+        </div>
     </section>
-
+    <section class="fotoparallaxs">
+        <div class="infoDegradado">
+            <p>We are in reach</p>
+            <h3>Cleaning must always be performed</h3>
+        </div>
+        <div class="filtro_degradado"></div>
+    </section>
     <section class="features ancho">
-        <h2>Some of Out Great Feature</h2>
+        <h2>Some of Out Great Features</h2>
         <div class="separador">
-
+            <hr>
+            <span></span>
+            <hr>
         </div>
         <div class="subtitle">
             <p>Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
             cubilia Curaesent non sapien cursus blandit turpis lacinia vestibulum</p>
         </div>
         <div class="tripleContenido">
-            <article>
-                <h3>FACILISIS LIGULA</h3>
+            <article class="wow animate__animated animate__fadeInLeft contenidoAlineadoDerecha">
+                <div class="union">
+                    <h3>FACILISIS LIGULA</h3>
+                    <span class="hexagonoChico"></span>
+                </div>
                 <p>Morbi quis lectus non nunc varius arius sed nec neque. Vestibulum ante ipsum primis in faucibus</p>
-                <h3>DAEU MORBI QULECTUS</h3>
+                <div class="union">
+                    <h3>DAEU MORBI QULECTUS</h3>
+                    <span class="hexagonoChico"></span>
+                </div>
                 <p>Ultrices posuere cubilia Curae; Praesent non sapien cursus, blandit turpis lacinia, vestibulum</p>
             </article>
             <article>
@@ -74,18 +90,27 @@
                     <img src="recursos/cazo.jpg" alt="Texto descriptivo">
                 </figure>
             </article>
-            <article>
-                <h3>SUSORTOR MALESUADA</h3>
+            <article class="wow animate__animated animate__fadeInRight contenidoAlineadoIzquierda">
+                <div class="union2">
+                    <span class="hexagonoChico"></span>
+                    <h3>SUSORTOR MALESUADA</h3>
+                </div>
                 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent non</p>
-                <h3>MALESUADA EU MORBI QUIS</h3>
+                <div class="union2">
+                    <span class="hexagonoChico"></span>
+                    <h3>MALESUADA EU MORBI QUIS</h3>
+                </div>
                 <p>Faucibus orci luctus et ultrices posuere cubilia CurPraesent non sap ien cursus, blandit turpis</p>
             </article>
         </div>
     </section>
-
-    <section id="carousel" class="services">
+    <section id="services" class="services">
+    <div id="carousel">
         <h2>Services We Offer</h2>
         <div class="separador">
+            <hr>
+            <span></span>
+            <hr>
         </div>
         <div id="slide-container" class="cuadrupleContenido">
             <article class="slide" data-slideIndex="0">
@@ -121,143 +146,296 @@
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
+    </div>
     </section>
-    <section class="bgColor whyChoose">
+    <section id="customer" class="whyChoose">
         <h2>Why Choose Us</h2>
         <div class="separador">
+            <hr>
+            <span></span>
+            <hr>
         </div>
-        <div class="grid-container">
+        <div class="wow animate__animated animate__fadeInUp grid-container">
             <div class="grid-item">
-                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-mug-hot forma2"></i>
                 <div class="contenidoChoose">
                     <h3>MALESUADA ACSUSC</h3>
                     <p>Vivamus ultricies sem at consectetur euismod. Ut mi justo, accumsan sed malesuada ac, suscip.</p>
                 </div>
             </div>
-            <div class="grid-item">
-                <i class="fa-solid fa-chair"></i>
+            <div class="wow animate__animated animate__fadeInUp grid-item">
+                <i class="fa-solid fa-chair forma2"></i>
                 <div class="contenidoChoose">
                     <h3>ONSECTETUR EUISMOD</h3>
                     <p>Ut mi justo, accumsan sed malesua da ac, suscipit in orci. Nulla ac dui digni ssim lectus tempor egest.</p>
                 </div>
             </div>
-            <div class="grid-item">
-                <i class="fa-solid fa-user"></i>
+            <div class="wow animate__animated animate__fadeInUp grid-item">
+                <i class="fa-solid fa-user forma2"></i>
                 <div class="contenidoChoose">
                     <h3>CUMSAN SED MALESUADA</h3>
                     <p>Curabitur turpis arcu, bibendum a orci at, dapibus euismod leo. Mauris efficitur faucibus leo id iaculis.</p>
                 </div>
             </div>
-            <div class="grid-item">
-                <i class="fa-solid fa-sun"></i>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-1s grid-item">
+                <i class="fa-solid fa-sun forma2"></i>
                 <div class="contenidoChoose">
                     <h3>SEM AT CONSECTETUR</h3>
                     <p>Suscipit in orci. Nulla ac dui dignissim lectus tempor egestas id at velit. Curabi tur turpis arcu, bibendum.</p>
                 </div>
             </div>
-            <div class="grid-item">
-                <i class="fa-solid fa-house"></i>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-1s grid-item">
+                <i class="fa-solid fa-house forma2"></i>
                 <div class="contenidoChoose">
                     <h3>SEM AT CONSECTETUR</h3>
                     <p>Curabitur turpis arcu, bibendum a orci at, dapibus euismod leo. Mauris efficitur faucibus leo id iaculis.</p>
                 </div>
             </div>
-            <div class="grid-item">
-                <i class="fa-solid fa-star"></i>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-1s grid-item">
+                <i class="fa-solid fa-star forma2"></i>
                 <div class="contenidoChoose">
                     <h3>JUSTO ACCUMSAN SED</h3>
                     <p>Nulla ac dui dignissim lectus tempor egestas id at velit. Curabitur turpis arcu, bibendum a orci at, dapib.</p>
                 </div>
             </div>
+            <div class="wow animate__animated animate__fadeInUp animate__delay-2s grid-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/euCpTzxPYWM?si=R9OAuSfzwWg93FUt&amp;start=5"
+                        title="YouTube Limpieza hospital"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="whatPeople">
-        <h2>What People Say About Us</h2>
-        <div class="separador">
-        </div>
+    <section id="about" class="bgColor whatPeople">
+    <h2>What People Say About Us</h2>
+    <div class="separador">
+        <hr>
+        <span></span>
+        <hr>
+    </div>
+    <div class="carousel ancho">
         <div class="profiles">
             <article>
                 <figure>
-                    <img src="recursos/profile1.jpg" alt="Texto descriptivo">
+                    <img src="recursos/profile1.jpg" alt="Profile 1">
                 </figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
                 <h3>TRISS MERIGOLD</h3>
-                <button class="btnViewMore">View more</button>
             </article>
-            <article>
+            <article class="active">
                 <figure>
-                    <img src="recursos/profile2.jpg" alt="Texto descriptivo">
+                    <img src="recursos/profile2.jpg" alt="Profile 2">
                 </figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
                 <h3>MARK JOHNSON</h3>
-                <button class="btnViewMore">View more</button>
             </article>
             <article>
                 <figure>
-                    <img src="recursos/profile3.jpg" alt="Texto descriptivo">
+                    <img src="recursos/profile3.jpg" alt="Profile 3">
                 </figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
                 <h3>YENNEFER Z VENGERBERGU</h3>
-                <button class="btnViewMore">View more</button>
-                <!-- crear el modal para más información y tener el filtro y el video respectivo de cada integrante -->
             </article>
         </div>
-    </section>
+        <div class="indicators">
+            <span data-index="0" class="active"></span>
+            <span data-index="1"></span>
+            <span data-index="2"></span>
+        </div>
+    </div>
+</section>
 
-    <section class="contact">
+
+    <section id="contact" class="contact">
         <h2>Contact form</h2>
         <div class="separador">
+            <hr>
+            <span></span>
+            <hr>
         </div>
-        <form action="#" method="post" class="form-container">
+        <form action="#" method="post" class="form-container ancho" id="contactForm">
             <div class="row">
                 <div class="input-container">
-                <input type="text" id="name" name="name" placeholder=" " required>
-                <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder=" ">
+                    <label for="name">Your Name</label>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                    <div class="input-container">
+                    <input type="text" id="email" name="email" autocomplete="email" placeholder=" ">
+                    <label for="email">Your E-mail</label>
+                    <span class="error-message" id="emailError"></span>
                 </div>
                 <div class="input-container">
-                <input type="text" id="email" name="email" placeholder=" " required>
-                <label for="email">Your E-mail</label>
-                </div>
-                <div class="input-container">
-                <input type="text" id="phone" name="phone" placeholder=" " required>
-                <label for="phone">Your Phone</label>
+                    <input type="text" id="phone" name="phone" autocomplete="phone" placeholder=" ">
+                    <label for="phone">Your Phone</label>
+                    <span class="error-message" id="phoneError"></span>
                 </div>
             </div>
             <div class="textarea-container">
-                <textarea name="message" id="message" placeholder=" " required></textarea>
+                <textarea name="message" id="message" placeholder=" "></textarea>
                 <label for="message">Your Message</label>
+                <span class="error-message" id="messageError"></span>
             </div>
-            <button type="submit">Submit comment</button>
+            <button type="button" id="validateButton">Submit comment</button>
             </form>
     </section>
-    <!-- ADEMAS DE LA LANDINGPAGE ME FALTARIA AGREGAR VIDEO, PARALLAXS, ACORDEON, LIGHTBOX, MODAL Y FILTRO -->
 
-    <?php require 'footerPrincipal.html';?>
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Correo enviado exitosamente. Pronto nos comunicaremos con usted.</p>
+        </div>
+    </div>
+
+    <section class="asked">
+        <h2>Frequently Asked Questions</h2>
+        <div class="separador">
+            <hr>
+            <span></span>
+            <hr>
+        </div>
+        <article class="ancho">
+            <div class="contenedorFlex">
+                <div class="caja"><i class="fa-solid fa-plus"></i></div>
+                <h3>Do you offer residential or commercial cleaning services?</h3>
+            </div>
+            <p>Yes, we provide both residential and commercial cleaning services. You can customize your cleaning plan according to your specific needs and preferences.</p>
+        </article>
+        <article class="ancho">
+            <div class="contenedorFlex">
+                <div class="caja"><i class="fa-solid fa-plus"></i></div>
+                <h3>What cleaning products do you use?</h3>
+            </div>
+            <p>We use eco-friendly and non-toxic cleaning products to ensure safety for you, your family, and the environment. If you have specific preferences, let us know!</p>
+        </article>
+        <article class="ancho">
+            <div class="contenedorFlex">
+                <div class="caja"><i class="fa-solid fa-plus"></i></div>
+                <h3>How do I schedule a cleaning appointment?</h3>
+            </div>
+            <p>You can schedule an appointment by contacting us through our website, phone, or email. We will work with you to find the most convenient time.</p>
+        </article>
+        <article class="ancho">
+            <div class="contenedorFlex">
+                <div class="caja"><i class="fa-solid fa-plus"></i></div>
+                <h3>Do I need to be home during the cleaning?</h3>
+            </div>
+            <p>No, you don't need to be home. Many of our clients provide us with access beforehand. Rest assured, our staff is trustworthy and professional.</p>
+        </article>
+        <article class="ancho">
+            <div class="contenedorFlex">
+                <div class="caja"><i class="fa-solid fa-plus"></i></div>
+                <h3>What happens if I need to cancel or reschedule?</h3>
+            </div>
+            <p>If you need to cancel or reschedule, please inform us at least 24 hours in advance. We will be happy to accommodate your request.</p>
+        </article>
+    </section>
+    <!-- ADEMAS DE LA LANDINGPAGE ME FALTARIA , LIGHTBOX(Cuadro emergente para suscribirse o algo así)responsive-->
+    <button class="scrollToTop" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+    <?php require 'footer.html';?>
 
     <script>
         // SCRIPT SLIDE
-        $(function() {
-            $(".rslides").responsiveSlides({
-                auto: true,         // Cambia de imagen automáticamente
-                speed: 500,         // Velocidad de la transición
-                timeout: 4000,      // Tiempo entre transiciones
-                pager: false,       // Oculta la paginación
-                nav: true,          // Activa las flechas de navegación
-                prevText: "&#x3C;", // Usa el icono "<" para el botón anterior
-                nextText: "&#x3E;", // Usa el icono ">" para el botón siguiente
-                random: false,      // No aleatoriza el orden de las imágenes
-                pause: false,        // Pausa el cambio de imagen al pasar el cursor
-                pauseControls: true // Pausa al pasar el cursor sobre los controles
+        $(function () {
+        // Datos dinámicos para cada slide
+        const slideContents = [
+            {
+            title: "Offering high quality cleaning",
+            subtitle: "services at affordable prices",
+            description: "Quisque suscipit lacus vestibulum odio rhoncus, non iaculis lectus mattis."
+            },
+            {
+            title: "We provide a great selection",
+            subtitle: "of janitorial services",
+            description: "Integer mattis tempus neque, eget tincidunt nibh tincidunt."
+            },
+            {
+            title: "Have a cleaning related problem?",
+            subtitle: "Stay in touch!",
+            description: "Morbi quis lectus non nunc varius varius sed nec neque."
+            },
+            {
+            title: "We clean every room on every visit",
+            subtitle: "we do not use a rotational system.",
+            description: "Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu."
             }
+        ];
+        // Iniciar el slider
+        $(".rslides").responsiveSlides({
+            auto: true,         // Cambia de imagen automáticamente
+            speed: 500,
+            timeout: 4000,
+            pager: false,
+            nav: true,
+            prevText: "&#x3C;",
+            nextText: "&#x3E;",
+            random: false,
+            pause: false,
+            pauseControls: true,
+            after: function (index) {
+            syncContent(index);
+            }
+        });
+        // Función para sincronizar el contenido con la imagen activa
+        function syncContent(index) {
+            const contentContainer = $('.informacionSlide');
+            // Cambiar la información en la pantalla según el índice de la imagen
+            const slideContent = slideContents[index];
+            if (slideContent) {
+            contentContainer.find("h2").html(
+                `${slideContent.title} <span>${slideContent.subtitle}</span>`
             );
+            contentContainer.find("p").text(slideContent.description);
+            }
+        }
+        // Llamar manualmente al inicio para mostrar la información inicial
+        syncContent(0);
         });
-        // SCRIPT MENU RESPONSIVE
-        document.addEventListener('DOMContentLoaded', () => {
-            const menu = document.querySelector('.menu');
-            const toggleButton = document.querySelector('.menu-toggle');
-
-            toggleButton.addEventListener('click', () => {
-                menu.classList.toggle('show');
+        // SCRIPT CAROUSEL PROFILES
+        document.addEventListener('DOMContentLoaded', function () {
+            const articles = document.querySelectorAll('.profiles article');
+            const indicators = document.querySelectorAll('.indicators span');
+            let currentIndex = 1; // Iniciar con el artículo central
+            function updateCarousel(index) {
+                // Resetear todos los artículos e indicadores
+                articles.forEach((article, i) => {
+                    article.classList.remove('active');
+                    indicators[i].classList.remove('active');
+                });
+                // Activar el artículo e indicador correspondiente
+                articles[index].classList.add('active');
+                indicators[index].classList.add('active');
+            }
+            // Configurar eventos para los indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel(currentIndex);
+                });
             });
+            // Actualizar el carrusel para reflejar el artículo inicial (en el medio)
+            updateCarousel(currentIndex);
         });
+        //INICIALIZAR EL WOW
+        new WOW().init();
+        //Botón para ir hasta arriba
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
     </script>
     <script src="scripts/carousel.js"></script>
+    <script src="scripts/validateForm.js"></script>
+    <script src="scripts/wow.min.js"></script>
 </body>
 </html>

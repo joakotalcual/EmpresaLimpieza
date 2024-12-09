@@ -1,40 +1,31 @@
-function autoplayCarousel() {
-  const slideContainerEl = document.getElementById("slide-container");
+function setupCarousel() {
+  const slideContainer = document.getElementById("slide-container");
   const slides = document.querySelectorAll(".slide");
-  let slideWidth = slides[0].offsetWidth;
+  let currentIndex = 0; // Índice para rastrear el slide visible
 
-  // Actualizar el ancho del slide al redimensionar la ventana
-  window.addEventListener("resize", () => {
-    slideWidth = slides[0].offsetWidth;
-  });
-
-  const navigate = (direction) => {
-    const maxScrollLeft = slideContainerEl.scrollWidth - slideContainerEl.clientWidth;
-
-    if (direction === "forward") {
-      let newScrollLeft = slideContainerEl.scrollLeft + slideWidth;
-      if (newScrollLeft > maxScrollLeft) {
-        newScrollLeft = 0; // Volver a la primera posición
-      }
-      slideContainerEl.scrollLeft = newScrollLeft;
-    } else if (direction === "backward") {
-      let newScrollLeft = slideContainerEl.scrollLeft - slideWidth;
-      if (newScrollLeft < 0) {
-        newScrollLeft = maxScrollLeft; // Ir a la última posición
-      }
-      slideContainerEl.scrollLeft = newScrollLeft;
+  const moveToSlide = (index) => {
+    // Evita que el índice sea negativo o mayor al límite de los slides
+    if (index < 0) {
+      index = slides.length - 1; // Desplazarse al último slide
+    } else if (index >= slides.length) {
+      index = 0; // Desplazarse de vuelta al primer slide
     }
+    slideContainer.scrollTo({
+      left: slides[0].offsetWidth * index, // Moverse horizontalmente
+      behavior: "smooth"
+    });
+    currentIndex = index; // Actualiza el índice actual
   };
 
-  document.getElementById("back-button").addEventListener("click", () => navigate("backward"));
-  document.getElementById("forward-button").addEventListener("click", () => navigate("forward"));
+  // Configurar los eventos para las flechas
+  document.getElementById("forward-button").addEventListener("click", () => {
+    moveToSlide(currentIndex + 1);
+  });
 
-  // Configurar autoplay para moverse hacia adelante
-  const autoplay = setInterval(() => navigate("forward"), 5000);
-
-  // Pausar autoplay al pasar el ratón por encima
-  slideContainerEl.addEventListener("mouseenter", () => clearInterval(autoplay));
-  slideContainerEl.addEventListener("mouseleave", () => setInterval(() => navigate("forward"), 5000));
+  document.getElementById("back-button").addEventListener("click", () => {
+    moveToSlide(currentIndex - 1);
+  });
 }
 
-autoplayCarousel();
+// Llamar a la función para configurar el carrusel después de que el DOM esté listo
+document.addEventListener("DOMContentLoaded", setupCarousel);
