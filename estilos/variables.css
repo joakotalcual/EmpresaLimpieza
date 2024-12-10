@@ -13,5 +13,20 @@
     --font-title: 'Dancing Script', cursive;
     --font-text: "Noto Sans", sans-serif;
     --font-size-title: 3rem;
-    --font-size-text: 1rem;
+    --font-size-text: 1.2rem;
+}
+@media (max-width: 768px) {
+    /* Variables para Tablet */
+    :root{
+        --font-size-title: 2rem;
+        --font-size-text: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Variables para Móvil */
+    :root{
+        --font-size-title: 1.5rem;
+        --font-size-text: 0.8rem;
+    }
 }

@@ -1,5 +1,9 @@
 @import url('variables.css');
-@media screen and (max-width:480px){
+@media(max-width:480px){
+    /* GENERALES */
+    .separador, .separador2{
+        display: none;
+    }
     /* HEADER */
     header{
         position: fixed;
@@ -75,5 +79,107 @@
     }
     .rslides_nav.next {
         right: 5px;
+    }
+    /* OUR CORE VALUES */
+    .curved-div{
+        height: 75vh;
+        top: 70%;
+        left: 0;
+        transform: translateY(0%);
+        z-index: 2;
+        clip-path: polygon(50% 0%, 70% 3%, 88% 8%, 100% 17%, 100% 100%, 0 100%, 0 16%, 13% 8%, 31% 2%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--secondary-color);
+    }
+    .curved-div .contenidoCurved{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contenidoCurved article{
+        margin:4% 0;
+    }
+    /* SOME OF OUR GREAT FEATURES */
+    .features{
+        margin: 0 5%;
+    }
+    .features .tripleContenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+    }
+    .tripleContenido h3{
+        margin: 5px 0;
+    }
+    .features .tripleContenido article{
+        display: flex;
+        flex-direction: column;
+    }
+    .features .tripleContenido article figure img{
+        width: 100%;
+        height: auto;
+    }
+    .features .tripleContenido article figure{
+        width: 100%;
+    }
+    /* SERVICES */
+    
+    /* WHY CHOOSE US */
+    .whyChoose{
+        padding: 0%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+        margin: 0 5%;
+    }
+    .grid-item:nth-child(7) {
+        grid-column: 1;
+        margin-top: 2%;
+    }
+    .grid-item .forma2{
+        font-size: calc(var(--font-size-title));
+    }
+    /* WHAT PEOPLE */
+    .profiles {
+        display: flex;
+        overflow: hidden;
+        gap: 0;
+        margin-top: 5%;
+    }
+    .profiles article {
+        flex: 0 0 100%;
+        transform: scale(1);
+    }
+    .profiles article:not(.active) {
+        display: none;
+    }
+    .indicators span {
+        width: 10px;
+        height: 10px;
+        border: 2px var(--text-color-secondary) solid;
+        margin: 10px 5px 40px 5px;
+        transition: all 0.8s linear;
+    }
+    .indicators span.active {
+        transition: all 0.8s linear;
+    }
+    /* CONTACT FORM */
+    .row {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        gap: 10px;
+    }
+    /* FOOTER */
+    .comunicacion{
+        gap: 10px;
+        font-size: 15px;
+        padding: 4%;
     }
 }
