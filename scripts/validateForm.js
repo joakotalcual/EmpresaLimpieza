@@ -46,6 +46,10 @@ document.getElementById("validateButton").addEventListener("click", function () 
         console.log("Name: "+nameInput.value+" E-mail: "+emailInput.value+" Phone: "+phoneInput.value+" \nMessage: "+messageInput.value);
         const modal = document.getElementById("successModal");
         modal.style.display = "block";
+        nameInput.value = '';
+        emailInput.value = '';
+        phoneInput.value = '';
+        messageInput.value = '';
         // document.getElementById("contactForm").submit();
     }
 });

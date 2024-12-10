@@ -12,7 +12,9 @@
     <script src='https://code.jquery.com/jquery-3.7.1.js' crossorigin='anonymous'></script>
     <script src="scripts/responsiveslides.min.js"></script>
     <script src="scripts/wow.min.js"></script>
-    </head>
+    <link rel="stylesheet" href="recursos/fancybox.css">
+    <script src="scripts/fancybox.js"></script>
+</head>
 <body>
     <?php require 'header.html';?>
     <section class="Slide">
@@ -114,6 +116,12 @@
             <hr>
         </div>
         <div id="slide-container" class="cuadrupleContenido">
+            <article class="slide" data-slideIndex="3">
+                <figure>
+                    <img src="recursos/service4.jpg" alt="Texto descriptivo">
+                </figure>
+                <p>CARPET AND UPHOLSTERY CLEANING</p>
+            </article>
             <article class="slide" data-slideIndex="0">
                 <figure>
                     <img src="recursos/service1.jpg" alt="Texto descriptivo">
@@ -138,6 +146,12 @@
                 </figure>
                 <p>CARPET AND UPHOLSTERY CLEANING</p>
             </article>
+            <article class="slide" data-slideIndex="0">
+                <figure>
+                    <img src="recursos/service1.jpg" alt="Texto descriptivo">
+                </figure>
+                <p>OFFICE & COMMERCIAL CLEANING</p>
+            </article>
         </div>
         <div class="contenedor_flechas">
             <button href="#" id="back-button" class="arrow back">
@@ -148,7 +162,8 @@
             </button>
         </div>
     </div>
-    </section>
+</section>
+
     <section id="customer" class="whyChoose">
         <h2 class="h2Color">Why Choose Us</h2>
         <div class="separador">
@@ -214,44 +229,69 @@
         </div>
     </section>
     <section id="about" class="bgColor whatPeople">
-    <h2 class="h2Color">What People Say About Us</h2>
-    <div class="separador">
-        <hr>
-        <span></span>
-        <hr>
-    </div>
-    <div class="carousel ancho">
-        <div class="profiles">
-            <article>
-                <figure>
-                    <img src="recursos/profile1.jpg" alt="Profile 1">
-                </figure>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
-                <h3>TRISS MERIGOLD</h3>
-            </article>
-            <article class="active">
-                <figure>
-                    <img src="recursos/profile2.jpg" alt="Profile 2">
-                </figure>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
-                <h3>MARK JOHNSON</h3>
-            </article>
-            <article>
-                <figure>
-                    <img src="recursos/profile3.jpg" alt="Profile 3">
-                </figure>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
-                <h3>YENNEFER Z VENGERBERGU</h3>
-            </article>
+        <h2 class="h2Color">What People Say About Us</h2>
+        <div class="separador">
+            <hr>
+            <span></span>
+            <hr>
         </div>
-        <div class="indicators">
-            <span data-index="0" class="active"></span>
-            <span data-index="1"></span>
-            <span data-index="2"></span>
+        <div class="carousel ancho">
+            <div class="profiles">
+                <article>
+                    <figure>
+                        <img src="recursos/profile1.jpg" alt="Profile 1">
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
+                    <h3>TRISS MERIGOLD</h3>
+                </article>
+                <article class="active">
+                    <figure>
+                        <img src="recursos/profile2.jpg" alt="Profile 2">
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
+                    <h3>MARK JOHNSON</h3>
+                </article>
+                <article>
+                    <figure>
+                        <img src="recursos/profile3.jpg" alt="Profile 3">
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repellat maxime sed expedita laborum illum.</p>
+                    <h3>YENNEFER Z VENGERBERGU</h3>
+                </article>
+            </div>
+            <div class="indicators">
+                <span data-index="0" class="active"></span>
+                <span data-index="1"></span>
+                <span data-index="2"></span>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <section id="about" class="bgColor whatPeople">
+        <h2 class="h2Color">Evidence</h2>
+        <div class="separador">
+            <hr>
+            <span></span>
+            <hr>
+        </div>
+        <div class="contenedorGaleria">
+            <a href="recursos/evidence2.jpg" data-fancybox="gallery">
+                <figure>
+                    <img src="recursos/evidence2.jpg" alt="Evidencia 2">
+                </figure>
+            </a>
+            <a href="recursos/evidence3.jpg" data-fancybox="gallery">
+                <figure>
+                    <img src="recursos/evidence3.jpg" alt="Evidencia 3">
+                </figure>
+            </a>
+            <a href="recursos/evidence1.jpg" data-fancybox="gallery">
+                <figure>
+                    <img src="recursos/evidence1.jpg" alt="Evidencia 1">
+                </figure>
+            </a>
+        </div>
+    </section>
 
     <section id="contact" class="contact">
         <h2 class="h2Color">Contact form</h2>
@@ -284,7 +324,7 @@
                 <span class="error-message" id="messageError"></span>
             </div>
             <button type="button" id="validateButton">Submit comment</button>
-            </form>
+        </form>
     </section>
 
     <!-- Modal -->
@@ -338,7 +378,16 @@
             <p>If you need to cancel or reschedule, please inform us at least 24 hours in advance. We will be happy to accommodate your request.</p>
         </article>
     </section>
-    <!-- ADEMAS DE LA LANDINGPAGE ME FALTARIA , LIGHTBOX(Cuadro emergente para suscribirse o algo así)responsive-->
+    <section id="modal" class="contModal">
+        <div class="alineacion_cerrar">
+            <i id="cerrar_modal" class="cerrarmodal fas fa-times-circle"></i>
+        </div>
+        <br>
+        <h2>Contact Us</h2>
+        <p>If you have any questions concerning our services, please fill out the contact form below.</p>
+        <br>
+        <a href="#contact">Go to Contact Form</a>
+    </section>
     <button class="scrollToTop" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
     <?php require 'footer.html';?>
 
@@ -382,6 +431,15 @@
             pauseControls: true,
             after: function (index) {
             syncContent(index);
+            }
+        });
+        // Ocultar el h1 en movil
+        document.addEventListener('scroll', () => {
+            const title = document.querySelector('.title');
+            if (window.scrollY > 100) {
+                title.classList.add('hidden'); // Oculta el título
+            } else {
+                title.classList.remove('hidden'); // Muestra el título
             }
         });
         // Función para sincronizar el contenido con la imagen activa
@@ -431,6 +489,16 @@
                 behavior: 'smooth'
             });
         }
+        //FANCYBOX
+        Fancybox.bind('[data-fancybox="gallery"]', {});
+        // SCRIPT MENU RESPONSIVE
+        document.addEventListener('DOMContentLoaded', () => {
+            const menu = document.querySelector('.menu');
+            const toggleButton = document.querySelector('.menu-toggle');
+            toggleButton.addEventListener('click', () => {
+                menu.classList.toggle('show');
+            });
+        });
         //INICIALIZAR EL WOW
         new WOW().init();
         $(document).ready(function() {
@@ -449,6 +517,69 @@
                 $('.contenedorFlex').not(this).find('.caja i').removeClass('fa-minus').addClass('fa-plus');
             });
         });
+        ///MODAL PUBLICIDAD
+        let closeCount = parseInt(localStorage.getItem('closeCount')) || 0; // Recupera el conteo del localStorage o lo inicializa en 0
+        let isModalHidden = false; // Bloquea la aparición del modal durante el delay
+        closeCount = 0;
+        if (closeCount < 3) { // Solo muestra el modal si no ha sido cerrado 3 veces
+            $("#boton_modal").click(function () {
+                showModal();
+            });
+
+            $("#cerrar_modal").click(function () {
+                hideModal();
+            });
+
+            // por tiempo 20 segundos
+            function tiempo() {
+                if (closeCount < 3 && !isModalHidden) {
+                    showModal();
+                }
+            }
+            setTimeout(tiempo, 20000);
+
+            // click por fuera
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    hideModal();
+                }
+            };
+
+            // click tecla ESC
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    hideModal();
+                }
+            });
+
+            // scroll más de 600px
+            function onScroll() {
+                const scrollTop = window.scrollY;
+
+                if (scrollTop > 600 && closeCount < 3 && !isModalHidden) {
+                    showModal();
+                }
+            }
+            window.addEventListener('scroll', onScroll);
+        }
+
+        // Función para mostrar el modal
+        function showModal() {
+            $("#modal").addClass("mostrar");
+        }
+
+        // Función para ocultar el modal y aplicar delay
+        function hideModal() {
+            $("#modal").removeClass("mostrar");
+            closeCount++;
+            localStorage.setItem('closeCount', closeCount);
+
+            // Bloquea la aparición del modal durante 10 segundos
+            isModalHidden = true;
+            setTimeout(() => {
+                isModalHidden = false;
+            }, 10000); // 10 segundos de delay
+        }
     </script>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/validateForm.js"></script>

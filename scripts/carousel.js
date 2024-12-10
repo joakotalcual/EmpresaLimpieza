@@ -1,31 +1,32 @@
-function setupCarousel() {
-  const slideContainer = document.getElementById("slide-container");
-  const slides = document.querySelectorAll(".slide");
-  let currentIndex = 0; // Índice para rastrear el slide visible
+const slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+const totalSlides = slides.length;
+const slideWidth = slides[0].offsetWidth; // Ancho de cada slide
 
-  const moveToSlide = (index) => {
-    // Evita que el índice sea negativo o mayor al límite de los slides
+// Función para mover los slides
+const moveToSlide = (index) => {
+    // Movimiento circular
     if (index < 0) {
-      index = slides.length - 1; // Desplazarse al último slide
-    } else if (index >= slides.length) {
-      index = 0; // Desplazarse de vuelta al primer slide
+        index = totalSlides - 1; // Mover al último slide
+    } else if (index >= totalSlides) {
+        index = 0; // Mover al primer slide
     }
-    slideContainer.scrollTo({
-      left: slides[0].offsetWidth * index, // Moverse horizontalmente
-      behavior: "smooth"
+    slides.forEach((slide, i) => {
+        const offset = (i - index) * 100; // Desplazamiento relativo
+        slide.style.transform = `translateX(${offset}%)`; // Desplazar el slide
     });
-    currentIndex = index; // Actualiza el índice actual
-  };
+    currentIndex = index;
+};
 
-  // Configurar los eventos para las flechas
-  document.getElementById("forward-button").addEventListener("click", () => {
-    moveToSlide(currentIndex + 1);
-  });
+// Botón de retroceso
+document.getElementById("back-button").addEventListener("click", () => {
+    moveToSlide(currentIndex - 1); // Mover al slide anterior
+});
 
-  document.getElementById("back-button").addEventListener("click", () => {
-    moveToSlide(currentIndex - 1);
-  });
-}
+// Botón de avance
+document.getElementById("forward-button").addEventListener("click", () => {
+    moveToSlide(currentIndex + 1); // Mover al siguiente slide
+});
 
-// Llamar a la función para configurar el carrusel después de que el DOM esté listo
-document.addEventListener("DOMContentLoaded", setupCarousel);
+// Mover al primer slide al cargar
+moveToSlide(currentIndex);
