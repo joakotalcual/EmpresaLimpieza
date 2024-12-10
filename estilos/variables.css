@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 :root {
     --primary-color: rgb(64, 172, 255);
     --secondary-color: rgb(252, 252, 252);
@@ -7,4 +9,9 @@
     --text-color-secondary-filter: rgba(103, 103, 103, 0.7);
     --background-color: rgb(244, 244, 244);
     --color-black: rgb(0, 0, 0);
+
+    --font-title: 'Dancing Script', cursive;
+    --font-text: "Noto Sans", sans-serif;
+    --font-size-title: 3rem;
+    --font-size-text: 1rem;
 }

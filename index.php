@@ -11,7 +11,8 @@
     <script src='https://kit.fontawesome.com/d188054eba.js' crossorigin='anonymous'></script>
     <script src='https://code.jquery.com/jquery-3.7.1.js' crossorigin='anonymous'></script>
     <script src="scripts/responsiveslides.min.js"></script>
-</head>
+    <script src="scripts/wow.min.js"></script>
+    </head>
 <body>
     <?php require 'header.html';?>
     <section class="Slide">
@@ -22,13 +23,13 @@
             <li><img src="recursos/slide3.jpg" alt=""></li>
         </ul>
         <div class="informacionSlide animate__animated animate__fadeIn animate__delay-1s">
-            <h2>Offering high quality cleaning
+            <h2 class="h2ColorPrincipal">Offering high quality cleaning
                 <span>services at affordable prices</span></h2>
             <p>Quisque suscipit lacus vestibulum odio rhoncus, non iaculis lectus mattis. Integer mattis tempus neque, eget tincidunt nibh tin cidunt ac. Maecenas feugiat lorem ut nibh maximus tempus. Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus</p>
         </div>
     </section>
     <section class="curved-div">
-        <h2 class="ancho">Our Core Values</h2>
+        <h2 class="ancho h2ColorPrincipal fontTitle">Our Core Values</h2>
         <div class="separador2 ancho">
             <hr>
             <span></span>
@@ -38,17 +39,17 @@
         um ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
         <div class="contenidoCurved ancho">
             <article class="wow animate__animated animate__fadeInUp">
-                <span class="forma">01</span>
+                <span class="forma fontTitle">01</span>
                 <h3>Vestibulum facilisis ligula</h3>
                 <p>Vestibulum facilisis ligula urna, vitae cursus tortor malesuada eu. Morbi quis lectus non nunc varius varius sed nec neque. Vestibul</p>
             </article>
             <article class="wow animate__animated animate__fadeInUp animate__delay-1s">
-                <span class="forma">02</span>
+                <span class="forma fontTitle">02</span>
                 <h3>ligula urna vitae cursus</h3>
                 <p>Morbi quis lectus non nunc varius varius sed nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultri</p>
             </article>
             <article class="wow animate__animated animate__fadeInUp animate__delay-2s">
-                <span class="forma">03</span>
+                <span class="forma fontTitle">03</span>
                 <h3>urna vitae cursus tort</h3>
                 <p>Vestibulum ante ipsum primis in faucibus or ciluctus et ultrices posuere cubilia Curaraesent non sapien cursus blandit turp</p>
             </article>
@@ -61,9 +62,9 @@
         </div>
         <div class="filtro_degradado"></div>
     </section>
-    <section class="features ancho">
-        <h2>Some of Out Great Features</h2>
-        <div class="separador">
+    <section class="ancho features">
+        <h2 class="h2Color">Some of Our Great Features</h2>
+        <div class="separador ancho">
             <hr>
             <span></span>
             <hr>
@@ -106,7 +107,7 @@
     </section>
     <section id="services" class="services">
     <div id="carousel">
-        <h2>Services We Offer</h2>
+        <h2 class="h2Color">Services We Offer</h2>
         <div class="separador">
             <hr>
             <span></span>
@@ -149,7 +150,7 @@
     </div>
     </section>
     <section id="customer" class="whyChoose">
-        <h2>Why Choose Us</h2>
+        <h2 class="h2Color">Why Choose Us</h2>
         <div class="separador">
             <hr>
             <span></span>
@@ -213,7 +214,7 @@
         </div>
     </section>
     <section id="about" class="bgColor whatPeople">
-    <h2>What People Say About Us</h2>
+    <h2 class="h2Color">What People Say About Us</h2>
     <div class="separador">
         <hr>
         <span></span>
@@ -253,7 +254,7 @@
 
 
     <section id="contact" class="contact">
-        <h2>Contact form</h2>
+        <h2 class="h2Color">Contact form</h2>
         <div class="separador">
             <hr>
             <span></span>
@@ -295,7 +296,7 @@
     </div>
 
     <section class="asked">
-        <h2>Frequently Asked Questions</h2>
+        <h2 class="h2Color">Frequently Asked Questions</h2>
         <div class="separador">
             <hr>
             <span></span>
@@ -423,8 +424,6 @@
             // Actualizar el carrusel para reflejar el artículo inicial (en el medio)
             updateCarousel(currentIndex);
         });
-        //INICIALIZAR EL WOW
-        new WOW().init();
         //Botón para ir hasta arriba
         function scrollToTop() {
             window.scrollTo({
@@ -432,10 +431,26 @@
                 behavior: 'smooth'
             });
         }
+        //INICIALIZAR EL WOW
+        new WOW().init();
+        $(document).ready(function() {
+            //Muestra la primera p
+            $('.asked article:first-child p').show();
+            $('.asked article:first-child .caja i').removeClass('fa-plus').addClass('fa-minus');
 
+            $('.contenedorFlex').on('click', function() {
+                const $answer = $(this).next('p');
+                // Ocultar todos los párrafos menos el seleccionado
+                $('.asked article p').not($answer).slideUp();
+                // Alternar el contenido del párrafo seleccionado
+                $answer.slideToggle();
+                // Cambiar el icono a + o - según el estado
+                $(this).find('.caja i').toggleClass('fa-plus fa-minus');
+                $('.contenedorFlex').not(this).find('.caja i').removeClass('fa-minus').addClass('fa-plus');
+            });
+        });
     </script>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/validateForm.js"></script>
-    <script src="scripts/wow.min.js"></script>
 </body>
 </html>
