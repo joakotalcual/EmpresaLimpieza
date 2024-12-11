@@ -319,58 +319,50 @@ nav ul li a{
     width: 100%;
 }
 /* SERVICES */
-.services {
-    padding-top: 4%;
-    clip-path: ellipse(70% 100% at 50% 0%);
-    background-color: var(--secondary-color);
-    height: 600px;
+.services{
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.cuadrupleContenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow: hidden;
-}
-.slide {
-    flex: 0 0 25%;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-    border: 1px red solid;
-}
-.slide figure img {
+.services .cuadrupleContenido article figure img{
     width: 100%;
     height: auto;
 }
-.slide:hover figure{
-    filter: drop-shadow(0 1px 15px var(--text-color-secondary-filter));
+.services .cuadrupleContenido article figure{
+    width: 100%;
+    clip-path: polygon(50% 0%, 95% 30%, 95% 70%, 50% 95%, 5% 70%, 5% 30%);
 }
 #carousel {
     max-width: 1200px;
+    margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     position: relative;
-    margin: auto;
-    flex-direction: column;
-    text-align: center;
 }
+/* contenido carrrousel */
 #slide-container {
+    width: 90%;
+    margin: auto;
     scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     display: flex;
-    width: calc(20% * 4 + 30px);
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
     padding: 10px;
-    color: var(--text-color-secondary);
+    color: var(--color-black);
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    margin: 0 auto;
-    border: 1px red solid;
+}
+.slide {
+    scroll-snap-align: left;
+    min-width: 23%;
+    text-align: center;
+}
+.slide figure img{
+    width: 100%;
+    height: auto;
 }
 .arrow {
     color: var(--text-color-secondary);
@@ -381,12 +373,10 @@ nav ul li a{
     border: 5px solid var(--text-color-secondary);
     border-radius: 50%;
 }
-
 .arrow:hover {
     color: var(--primary-color);
     border: 5px solid var(--primary-color);
 }
-
 .contenedor_flechas {
     position: absolute;
     top: 50%;
@@ -397,12 +387,6 @@ nav ul li a{
     transform: translateY(-50%);
     width: 100%;
 }
-
-#slide-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
 /* WHY CHOOSE US */
 .whyChoose{
     padding: 4%;
@@ -729,7 +713,8 @@ form button:hover {
 /* MODAL PUBLICIDAD SPAM */
 .contModal{
     padding: 40px 20px;
-    width: 550px;
+    max-width: 550px;
+    width: 90%;
     display: none;
     position: fixed;
     z-index: 10;
